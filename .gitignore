@@ -1,0 +1,11 @@
+.ipynb_checkpoints/
+__pycache__/
+.venv/
+lora_runs/
+work/
+results/
+*.zip
+*.safetensors
+*.pt
+*.pth
+easy_lora_llm.ipynb

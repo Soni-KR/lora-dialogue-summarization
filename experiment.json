@@ -1,0 +1,39 @@
+{
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "dataset": "knkarthick/dialogsum",
+  "seed": 42,
+  "training_examples": 1000,
+  "validation_examples": 500,
+  "epochs": 3,
+  "lora_targets": [
+    "q_proj",
+    "v_proj"
+  ],
+  "lora_rank": 8,
+  "lora_alpha": 16,
+  "learning_rate": 0.0002,
+  "training_batch_size": 2,
+  "max_dialogue_tokens": 320,
+  "max_training_tokens": 512,
+  "max_new_tokens": 128,
+  "generation_batch_size": 4,
+  "do_sample": false,
+  "initial_validation_loss": 2.170539140701294,
+  "best_checkpoint": "lora_runs/qv_1000_examples/checkpoints/checkpoint-1500",
+  "best_validation_loss": 1.3524084091186523,
+  "test_rows": 1500,
+  "test_dialogues": 500,
+  "test_shortened_inputs": 69,
+  "references_per_dialogue": [
+    3
+  ],
+  "rouge_protocol": "Mean per-dialogue F1 x100; best reference per metric; English stemming",
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "transformers": "4.57.1",
+    "peft": "0.17.1",
+    "trl": "0.24.0",
+    "datasets": "4.3.0",
+    "rouge-score": "0.1.2"
+  }
+}
